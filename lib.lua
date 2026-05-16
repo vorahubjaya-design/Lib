@@ -792,6 +792,7 @@ function vora_ui.new(config)
     self.config.SecondaryColor = self.config.SecondaryColor or Color3.fromRGB(20, 20, 25)
     self.config.TextColor = self.config.TextColor or Color3.fromRGB(255, 255, 255)
     self.config.SubTextColor = self.config.SubTextColor or Color3.fromRGB(124, 124, 124)
+    self.config.Footer = self.config.Footer or "Pandora Library | v1.2.0"
     
     self.Toggles = Toggles
     self.Options = Options
@@ -4187,9 +4188,22 @@ function vora_ui:BuildMainFrame()
 
     self.settings_btn_frame = create("Frame", {
         BackgroundColor3 = Color3.fromRGB(20, 20, 20),
-        Position = UDim2.new(0, 10, 1, -31 * scale_factor),
+        Position = UDim2.new(0, 10, 1, -54 * scale_factor),
         Size = UDim2.new(0, 116 * scale_factor, 0, 22 * scale_factor),
         BorderSizePixel = 0,
+        Parent = self.main_frame
+    })
+    
+    self.footer_label = create("TextLabel", {
+        Name = "SidebarFooter",
+        FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium),
+        TextColor3 = Color3.fromRGB(60, 60, 65),
+        Text = self.config.Footer,
+        BackgroundTransparency = 1,
+        Position = UDim2.new(0, 15 * scale_factor, 1, -22 * scale_factor),
+        Size = UDim2.new(0, 160 * scale_factor, 0, 14 * scale_factor),
+        TextSize = 10 * scale_factor,
+        TextXAlignment = Enum.TextXAlignment.Left,
         Parent = self.main_frame
     })
     create("UICorner", {CornerRadius = UDim.new(1, 0), Parent = self.settings_btn_frame})
@@ -4224,7 +4238,7 @@ function vora_ui:BuildMainFrame()
     self.settings_panel = create("Frame", {
         BackgroundColor3 = Color3.fromRGB(15, 15, 20),
         AnchorPoint = Vector2.new(0, 1),
-        Position = UDim2.new(0, 10, 1, -36 * scale_factor),
+        Position = UDim2.new(0, 10, 1, -59 * scale_factor),
         Size = UDim2.new(0, settingsPanelWidth, 0, 0),
         ClipsDescendants = true,
         Visible = false,
