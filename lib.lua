@@ -4188,7 +4188,7 @@ function vora_ui:BuildMainFrame()
 
     self.settings_btn_frame = create("Frame", {
         BackgroundColor3 = Color3.fromRGB(20, 20, 20),
-        Position = UDim2.new(0, 10, 1, -54 * scale_factor),
+        Position = UDim2.new(0, 10, 1, -31 * scale_factor),
         Size = UDim2.new(0, 116 * scale_factor, 0, 22 * scale_factor),
         BorderSizePixel = 0,
         Parent = self.main_frame
@@ -4197,10 +4197,10 @@ function vora_ui:BuildMainFrame()
     self.footer_label = create("TextLabel", {
         Name = "SidebarFooter",
         FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Medium),
-        TextColor3 = Color3.fromRGB(60, 60, 65),
+        TextColor3 = Color3.fromRGB(100, 100, 100),
         Text = self.config.Footer,
         BackgroundTransparency = 1,
-        Position = UDim2.new(0, 15 * scale_factor, 1, -22 * scale_factor),
+        Position = UDim2.new(0, headerLeftPadding, 0, 48 * scale_factor),
         Size = UDim2.new(0, 160 * scale_factor, 0, 14 * scale_factor),
         TextSize = 10 * scale_factor,
         TextXAlignment = Enum.TextXAlignment.Left,
@@ -4238,7 +4238,7 @@ function vora_ui:BuildMainFrame()
     self.settings_panel = create("Frame", {
         BackgroundColor3 = Color3.fromRGB(15, 15, 20),
         AnchorPoint = Vector2.new(0, 1),
-        Position = UDim2.new(0, 10, 1, -59 * scale_factor),
+        Position = UDim2.new(0, 10, 1, -36 * scale_factor),
         Size = UDim2.new(0, settingsPanelWidth, 0, 0),
         ClipsDescendants = true,
         Visible = false,
