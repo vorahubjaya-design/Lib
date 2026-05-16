@@ -852,7 +852,7 @@ function vora_ui.new(config)
     self._refreshJobs = {}
     self._notificationTimestamps = {}
     self._uiVisualSettings = {
-        Blur = true,
+        Blur = false,
         Snow = false,
         BackgroundEffects = false,
         TextGradient = true,
@@ -3606,7 +3606,7 @@ function vora_ui:BuildToggleButton()
         Rotation = 50,
         Color = ColorSequence.new({
             ColorSequenceKeypoint.new(0,        Color3.fromRGB(122, 92, 255)),
-            ColorSequenceKeypoint.new(0.515913, Color3.fromRGB(15, 15, 15)),
+            ColorSequenceKeypoint.new(0.515913, Color3.fromRGB(15, 15, 20)),
             ColorSequenceKeypoint.new(1,        Color3.fromRGB(122, 92, 255)),
         }),
         Parent = self.toggle_frame
@@ -3618,7 +3618,7 @@ function vora_ui:BuildToggleButton()
         Rotation = 90,
         Color = ColorSequence.new({
             ColorSequenceKeypoint.new(0, Color3.fromRGB(122, 92, 255)),
-            ColorSequenceKeypoint.new(1, Color3.fromRGB(25, 25, 25)),
+            ColorSequenceKeypoint.new(1, Color3.fromRGB(20, 20, 25)),
         }),
         Parent = toggle_stroke
     })
@@ -4222,7 +4222,7 @@ function vora_ui:BuildMainFrame()
     })
 
     self.settings_panel = create("Frame", {
-        BackgroundColor3 = Color3.fromRGB(15, 15, 15),
+        BackgroundColor3 = Color3.fromRGB(15, 15, 20),
         AnchorPoint = Vector2.new(0, 1),
         Position = UDim2.new(0, 10, 1, -36 * scale_factor),
         Size = UDim2.new(0, settingsPanelWidth, 0, 0),
