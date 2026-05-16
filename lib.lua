@@ -4200,7 +4200,7 @@ function vora_ui:BuildMainFrame()
         TextColor3 = Color3.fromRGB(100, 100, 100),
         Text = self.config.Footer,
         BackgroundTransparency = 1,
-        Position = UDim2.new(0, headerLeftPadding, 0, 39 * scale_factor),
+        Position = UDim2.new(0, headerLeftPadding, 0, 36 * scale_factor),
         Size = UDim2.new(0, 160 * scale_factor, 0, 14 * scale_factor),
         TextSize = 10 * scale_factor,
         TextXAlignment = Enum.TextXAlignment.Left,
