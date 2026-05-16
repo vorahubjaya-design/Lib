@@ -4027,7 +4027,7 @@ function vora_ui:BuildMainFrame()
     self.user_name_label = create("TextLabel", {
         FontFace = Font.new("rbxasset://fonts/families/GothamSSm.json", Enum.FontWeight.Regular),
         TextColor3 = Color3.fromRGB(52, 52, 52), Text = playerName, BackgroundTransparency = 1,
-        Position = UDim2.new(0, headerLeftPadding, 0, 32 * scale_factor), TextSize = 12 * scale_factor,
+        Position = UDim2.new(0, headerLeftPadding, 0, 48 * scale_factor), TextSize = 12 * scale_factor,
         Size = UDim2.new(0, 120 * scale_factor, 0, 16 * scale_factor),
         TextXAlignment = Enum.TextXAlignment.Left, TextTruncate = Enum.TextTruncate.AtEnd,
         Parent = self.main_frame
@@ -4200,7 +4200,7 @@ function vora_ui:BuildMainFrame()
         TextColor3 = Color3.fromRGB(100, 100, 100),
         Text = self.config.Footer,
         BackgroundTransparency = 1,
-        Position = UDim2.new(0, headerLeftPadding, 0, 48 * scale_factor),
+        Position = UDim2.new(0, headerLeftPadding, 0, 32 * scale_factor),
         Size = UDim2.new(0, 160 * scale_factor, 0, 14 * scale_factor),
         TextSize = 10 * scale_factor,
         TextXAlignment = Enum.TextXAlignment.Left,
